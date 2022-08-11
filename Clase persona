@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practica_clases
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            persona deportista = new persona();
+
+            Console.WriteLine("A continuaciòn ingrese sus datos personales");
+            Console.WriteLine("Nombre:");
+            deportista.name = Console.ReadLine();
+            Console.WriteLine("Nombre:");
+            deportista.age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Cèdula:");
+            deportista.id = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Sus datos son:");
+            Console.WriteLine(deportista.name);
+            Console.WriteLine(deportista.age);
+            Console.WriteLine(deportista.id);
+
+            //Ejecutar el mètodo
+            Console.WriteLine("Orden del dìa:");
+            deportista.caminar();
+            deportista.caminar();
+            deportista.saltar();
+            Console.ReadKey();
+        }
+    }
+}
