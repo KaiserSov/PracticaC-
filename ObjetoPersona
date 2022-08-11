@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practica_clases
+{
+    class persona
+    {
+        //Atributos
+        public int id;
+        public string name;
+        public int age;
+        public bool married;
+        public double high;
+
+        public void caminar()
+        {
+            Console.WriteLine("Caminas 3 km");
+        }
+
+        public void correr(String name)
+        {
+            Console.WriteLine($"{name} Comenzaste a correr a las 11:30. Llegaràs de nuevo a las 12:00");
+        }
+
+        public void saltar()
+        {
+            Console.WriteLine("Saltaràs 10 minutos");
+        }
+    }
+  }
