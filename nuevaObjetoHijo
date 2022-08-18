@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace EjercicioPOO
+{
+    class hijo:persona //hereda de persona
+    {
+
+        public int Nivel { get; set; }
+
+        //Metodos
+        public void jugar ()
+        {
+            Console.WriteLine("Estoy jugando");
+        }
+    }
+}
