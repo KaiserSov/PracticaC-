@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practica_clases
+{
+    class persona
+    {
+
+        //Constructores
+
+        public persona ()
+        {
+            this.id = 99999;
+            this.married = false;
+        }
+        public persona(int docu, Boolean casado, int edad)//Sobrecarga del mètodo
+        {
+            this.id = docu;
+            this.married = casado;
+            this.age = edad;
+        }
+
+        public persona(int docu, Boolean casado)//Sobrecarga del mètodo
+        {
+            this.id = docu;
+            this.married = casado;
+        }
+
+        //Atributos
+        private string _Name { get; set; }
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                if(value.Length>3)
+                this._Name = value;
+                else
+                {
+                    throw new ArgumentOutOfRangeException("El valor no puede ser menor a 3");
+                }
+            }
+        }
+        private int _age { get; set; }
+        public int age
+        {
+            get
+            {
+                return this._age;
+            }
+            set
+            {
+                if ( 0<value && value<110 )
+                    this._age = value;
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Tu edad no corresponde a los entrenamientos. Debe estar entre 0 - 110");
+                }
+            }
+        }
+        public int id;
+        public bool married { get; set; }
+        public double high { get; set; }
+
+        public void caminar()
+        {
+            Console.WriteLine("Caminas 3 km");
+        }
+
+        public void correr()
+        {
+            Console.WriteLine("Comenzaràs a correr a las 11:30. Llegaràs de nuevo a las 12:00");
+        }
+
+        public void saltar(string Name)
+        {
+            Console.WriteLine($"{Name} Saltaràs 10 minutos");
+        }
+
+        public void saltar(int altura)//Sobrecarga del mètodo saltar
+        {
+            Console.WriteLine($"Saltaràs {altura} metros");
+        }
+    }
+}
